@@ -14,7 +14,7 @@ app.get("/chat", async (req, res) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "deepseek/deepseek-chat-v3-0324:free",
+        model: "openrouter/free",
         messages: [{ role: "user", content: prompt }]
       })
     });
