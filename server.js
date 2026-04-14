@@ -2,6 +2,11 @@ const express = require("express");
 const fetch = require("node-fetch");
 
 const app = express();
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  next();
+});
 
 app.get("/chat", async (req, res) => {
   try {
